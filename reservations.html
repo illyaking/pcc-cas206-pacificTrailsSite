@@ -1,0 +1,57 @@
+<!DOCTYPE html> 
+<!-- 
+Assignment Name: Pacific Trails Resort case study
+File Name: reservations.html
+Date: 08/15/18
+Programmer: Illya King 
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+     <title>Pacific Trails Resort</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="css/pacific.css">
+    <script>
+    function validateForm() {
+    if (document.forms[0].myEmail.value =="") {
+        alert("Please enter an e-mail address.");
+        return false;
+    } //end if
+    return true;
+    } //end function validateForm
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+    <header><h1>Pacific Trails Resort</h1></header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="yurts.html">Yurts</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="reservations.html">Reservations</a></li>
+                <li><a href="shop.html">Shop</a></li>
+            </ul>
+        </nav>
+    <main>
+        <h2>Reservations at Pacific Trails</h2>
+        <h3>Contact Us</h3>
+        <form method="post" onsubmit="return validateForm();" action="http://webdevbasics.net/scripts/pacific.php">
+            <label for="myFName">First Name:</label> <input type="text" name="firstname" id="myFName">
+            <label for="myLName">Last Name:</label>  <input type="text" name="lastname" id="myLName" > 
+            <label for="myEmail">E-Mail:</label>  <input type="email" name="myEmail" id="myEmail">
+            <label for="myPhone">Phone:</label>  <input type="tel" name="phone" id="myPhone">
+            <label for="myDate">Arrival Date:</label> <input type="date" name="arrival" id="myDate">
+            <label for="myNights">Nights:</label> <input type="number" name="nights" id="myNights" min="1" max="14">
+            <label for="myComments">Comments:</label> <textarea name="comments" id="myComments" rows="2" cols="20"></textarea> 
+            <input type="submit" value="Submit" id="mySubmit">
+        </form>
+    </main>
+        <footer>
+                Copyright @ 2018 Pacific Trails Resort<br>
+                <a href="mailto:illya.king@pcc.edu">illya.king@pcc.edu</a>
+        </footer>
+    </div>
+    <!-- End of weekly module --> 
+</body>
+</html>
